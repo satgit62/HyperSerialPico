@@ -51,7 +51,7 @@ jobs:
         cd build
         rm *.*
         rm ../firmware/*
-        echo "Neopixel is using GPIO16(OUTPUT_DATA_PIN) on output 0." > ../firmware/Firmwares_for_Adafruit_Feather_RP2040_Scorpio.txt
+        echo "Neopixel is using GPIO16(OUTPUT_DATA_PIN) on output 16." > ../firmware/Firmwares_for_Adafruit_Feather_RP2040_Scorpio.txt
         echo "SPI is using spi0 interface pins: GPIO19(OUTPUT_SPI_DATA_PIN) and GPIO18(OUTPUT_SPI_CLOCK_PIN) on output 3 and 2 respectively." >> ../firmware/Firmwares_for_Adafruit_Feather_RP2040_Scorpio.txt
         cmake -DOVERRIDE_BOOT_WORKAROUND=ON -DOVERRIDE_DATA_PIN=16 -DOVERRIDE_SPI_DATA_PIN=19 -DOVERRIDE_SPI_CLOCK_PIN=18 -DCMAKE_BUILD_TYPE=Release ..
         cmake --build .
